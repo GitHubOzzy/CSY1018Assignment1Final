@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MGP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="CSS/main.css" rel="stylesheet">
+        <!-- this is the code for my favicon, it also works for older browsers because of the png in the root directory -->
+        <link rel="icon" href="favicon.png" type="image/png">
+        <link rel="shortcut icon" href="favicon.ico">
+        <!--I put the imported google fonts in seperate declarations because in HTML validator it gave an error-->
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/font-awesome.css">
+    </head>
+    <body>
+        <header class = "pageHeader">
+                <h2>Models of good practice</h2>
+        
+        </header>
+        <nav class ="navBarContainer">
+            <ul class ="navBarList">
+                <li><a href = "index.html"> Homepage</a></li>
+                <li><a href = "page2.html"> Terms</a></li>
+                <li><a href = "page3.html"> Comparisons</a></li>
+                <li><a href = "page4.html"> Resources</a></li>
+                <li class = "active"><a href = "page5.html"> MGP</a></li>
+                <li><a href = "page6.html"> Evaluation</a></li>
+            </ul>
+        </nav>
+        <div class = "contentContainer">
+            <article class = "page5LeftContent">
+                <h2>Wireframes and inspiration</h2>
+                <p>For the creation of my website (even before i started coding) I had decided to have a clean simple layout with only a few key colours. This would drive attention towards
+                    the content on the page and allow it to be seen easily. This can be evidenced in the wireframe picture to the right. </p>
+
+                    <p>When i did start coding, i followed the deisgn of the website <a href = "https://www.dotdash.com/">DotDash.</a> This website uses coloured blocks to seperate its content with a video in the middle,
+                    you can see how i have tried to emulate it on the <a href = "index.html"> Homepage.</a> I also tried to have my webpage show some feedback to the user when they are navigating it. For example the navigation bar has a nice hover effect with a fade-in, 
+                    and also the current page you are on his emboldened so it easy to see especially on smaller devices.</p>
+
+                <h2>Group Work Discussions</h2>
+                <p>When working with others in a group, i saw that using background colours made the website look old and not engaging. I saw that other people were using big background images instead of colours and
+                    drew inspiration from them. From this i decided to use a screenshot of my own code for the background.
+                </p>
+                <p>Working in a group was also extremely useful with helping to find the right combination of colours to use as i was biased towards my own website. An example of this was the colour for the font.
+                    This took quite a while to implement because of the background image colour being a dark grey. I thought plain white text was too plain and so after discussing it with group, we decided on a pale blue colour which is being used now.</p>
+
+                    <p>Group work also helped with the media queries, things that seemed obvious to me did not to others. When these issues were pointed out to me i was able to make changes to make things visually clearer. An example of this was the background image. 
+                        On smaller devices, the background image text was the same size as the website font, so i changed it so that the background image dissapears on devices smaller than 1024px. This cleared up the issue some people had.</p>
+                <h2>Testing</h2>
+                <p>To test my website i validated all the code on W3C Validator (Both HTML and CSS) and all pages passed with no errors and minimal warnings</p>
+            </article>
+            <aside class = "page5RightContent">
+                <div class = "page5image1">
+                <p>This image shows the christies website where i liked the clean navigation bar</p>
+                <img src="images/christies.jpg" title="A picture of christies navigation" alt="Christies Navigation Bar">
+                </div>
+
+                <div class = "page5image2">
+                <p>This is DotDash homepage that I took inspiration from to model my homepage</p>
+                <img src="images/dotdash.jpg" title="DotDash homepage inspiration" alt="DotDash Homepage">
+                </div>
+
+                <!-- SCALE THE IMAGES DOWN BELOW 720 WIDTH SO THEY CAN GO NEXT TO THE PAGE5LEFTCONTENT IN 2 SEPERATE COLUMNS-->
+
+            </aside>
+        </div>
+        <footer class = "pageFooter">
+            <div class ="instagramLogo">
+                <a href ="https://www.instagram.com/?hl=en"><i class="fa fa-instagram fa-3x instagram" aria-hidden="true" title="Instagram"></i></a>
+            </div><!-- FIX THESE AND THE SMALL JITTER THAT IS ON ALL PAGES THEN YOU ARE FINISHED-->
+            <div class="githubLogo">
+                <a href ="https://github.com/"><i class="fa fa-github-alt fa-3x github-alt" aria-hidden="true"  title="GitHub"></i></a>
+            </div>
+            <div class ="homepageLogo">
+                <a href = "index.html"><i class="fa fa-home fa-3x home" aria-hidden="true" title="Homepage"></i></a>
+            </div>
+            
+    </footer>
+    </body>
+</html>

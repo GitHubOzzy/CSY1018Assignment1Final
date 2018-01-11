@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Terms</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="CSS/main.css" rel="stylesheet">
+        <!-- this is the code for my favicon, it also works for older browsers because of the png in the root directory -->
+        <link rel="icon" href="favicon.png" type="image/png">
+        <link rel="shortcut icon" href="favicon.ico">
+        <!--I put the imported google fonts in seperate declarations because in HTML validator it gave an error-->
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/font-awesome.css">
+    </head>
+    <body>
+        <header class = "pageHeader">
+                <h2>Examples of different web terms!</h2>
+
+        </header>
+        <nav class ="navBarContainer">
+                <ul class ="navBarList">
+                    <li><a href = "index.html"> Homepage</a></li>
+                    <li class = "active"><a href = "page2.html"> Terms</a></li>
+                    <li><a href = "page3.html"> Comparisons</a></li>
+                    <li><a href = "page4.html"> Resources</a></li>
+                    <li><a href = "page5.html"> MGP</a></li>
+                    <li><a href = "page6.html"> Evaluation</a></li>
+                </ul>
+            </nav>
+            <div class = "columnContentContainer">
+                <article class = "pageTwoContent">
+                    <h2>FLEXBOX TERMS</h2>
+
+                    <h3>1. Display:Flex</h3>
+                    <p>this shows the parent element what type of display style it is going to use</p>
+                    <h3>2. Flex Direction</h3>
+                    <p>This determines what direction the items in the container will face. Values include row, column etc.</p>
+                    <h3>3. Justify-Content</h3>
+                    <p>this determines the layout/spacing of items in the container. Values include space-between, space-around etc. </p>
+                    <h3>4. Order:</h3>
+                    <p>this determines which item comes first in the flexbox layout (negative numbers, neutral then positive numbers)</p>
+                    <h3>5. Flex-Grow</h3>
+                    <p>This determines how much space the item will take up in its container</p>
+                    <h3>6. Flex-Shrink</h3>
+                    <p>This determines how much space the item will shrink to. Higher numbers mean MORE shrink not vice-versa</p>
+                    <h3>7. Flex-Basis</h3>
+                    <p>This determines the initial size of the item, can also be declared using box-sizing</p>
+                    <h3>8. Flex:</h3>
+                    <p>This is a shorthand way of determining 3 values: flow growth, shrink and basis</p>
+
+                    <h2>CSS STYLINGS</h2>
+
+                    <h3>9. Color (accepts only American spelling color :/)</h3>
+                    <p>Not to be confused with background-color, this version declares the text color</p>
+                    <h3>10. Background-Color</h3>
+                    <p>This states the background colour of the container unless used in the body tag(in CSS) which then colours the whole webpage</p>
+                    <h3>11. Padding</h3>
+                    <p>This determines the padding in ALL directions on the content in the container (too specify a perticular direction use "padding-left" etc.</p>
+                    <h3>12. Background-Image</h3>
+                    <p>This, similar to background-color, lets you chose an image for your container</p>
+                    <h3>13. Width:</h3>
+                    <p>This lets your set the width of your container using a % or px/em/rem value</p>
+                    <h3>14. Height:</h3>
+                    <p>Similar to Width, lets you set the height using a % or px/em/rem value</p>
+                    <h3>15. Border:</h3>
+                    <p>The border property lets you add a fixed border line around your content/Container. You can also add a colour and thickness</p>
+                    <h3>16. Margin:</h3>
+                    <p>Similar to Border and Padding, Margin alters the space between the container and edge of the viewport.</p>
+                    <h3>17. List-Style-Type</h3>
+                    <p>This specifies the type of style the list will have, set to none will just show the hyperlinks with no dot next to it</p>
+                    
+                    
+
+                    <h2>FONT STYLINGS</h2>
+
+                    <h3>18. Font-Family</h3>
+                    <p>Here you can declare what fonts you want to use, putting a second font after a comma, lets you declare a back-up font incase the first fails (useful for google fonts)</p>
+                    <h3>19. Font-Size</h3>
+                    <p>This lets you declare how big the font size is, common values include px, em and rem.</p>
+                    <h3>20. Text-Transform</h3>
+                    <p>This property lets yo transform your text, for example text-transform: uppercase does exactly what is says on the tin</p>
+                    <h3>21. Text-Align</h3>
+                    <p>This property aligns your text insde its container, text-align:center aligns the text in the very middle of your container</p>
+                    <h3>22. Text-Decoration</h3>
+                    <p>This property lets you add decor to your text items, like underlines and dotted</p>
+                    <h3>23. Text-Decoration-Color</h3>
+                    <p>This builds upon the last one by being able to change the color of the decoration</p>
+                    <h3>24. Font-Weight</h3>
+                    <p>This allows you change the font visual with values such as Bold and Lighter</p>
+                    <h3>25. Overflow-wrap</h3>
+                    <p>Overflow-wrap determines if the text content of a box will overflow from the container or not, it accepts values such as normal and break-word</p>
+
+                    <h2>SELECTORS</h2>
+
+                    <h3>26. Dot (.) Selector</h3>
+                    <p>The dot selector is use to select classes in the CSS </p>
+                    <h3>27. No selector</h3>
+                    <p>Not declaring a selector means that the CSS will select all nodes with that name</p>
+                    <h3>28. Hash (#) Selector</h3>
+                    <p>The hashkey means that the CSS will select all the ID's with that name</p>
+                    <h3>29. the asterix (*) Selector</h3>
+                    <p>The asterix is used as an universal selector meaning it will select all elements, can be used with other selectors e.g. *.Classname</p>
+                    <h3>30. Browser Selectors</h3>
+                    <p>There are different browser selectors that are useful becuase of the way CSS interacts with different browsers. To select them in CSS we type -webkit- for Chrome
+                        -moz-for Firfox
+                        -o- for Opera
+                        -ms- for IE/Edge</p>
+                    
+                    <h2>HTML Tags </h2>
+
+                    <h3>32. Head Tag</h3>
+                    <p>The head tag is always at the top of the page, you use this to store all the data your site will need, e.g. Google Fonts, webpage language etc.</p>
+                    <h3>33. Body Tag</h3>
+                    <p>This tag is used to define the area that the page content will be stored, inside this tag could be many other tags</p>
+                    <h3>34. Header Tag</h3>
+                    <p>This tag (not to be confused with head) is generally where the webpage title and possibly navigation will go</p>
+                    <h3>35. Nav Tag</h3>
+                    <p>Althought the navigation could go in the header, it can be seperate using the nav tag, inside it is usually the UL tag and LI tags</p>
+                    <h3>36. Undorder List Tag</h3>
+                    <p>The UL tag is used to define where the beginning of your hyperlinks will start and end</p>
+                    <h3>37. List Tag</h3>
+                    <p>The list tag is where you actually store the hyperlink destination and visible text</p>
+                    <h3>38. Footer Tag</h3>
+                    <p>The footer is the part of the page where you can put things like contact information/forms and in my case a google map</p>
+                    <h3>39. Script Tag</h3>
+                    <p>The script tag is where you store JavaScript Code, i have used this only for the Google Maps script</p>
+                    <h3>40. h Tags</h3>
+                    <p>h Tags are used for structuring content, the h tags have pre-defined stylings on them with h1 being the biggest in size</p>
+                    <h3>41. p Tags</h3>
+                    <p>The p Tags, similar to h Tags, are used for structuring text and also have pre-defined stylings on them</p>
+                    <h3>42. Title Tag</h3>
+                    <p>The Title Tag goes in the Head tag and is used to declare the Title of the webpage which is then shown in the Tab in the browser</p>
+                    <h3>43. Article Tag</h3>
+                    <p>The Article Tag is used to structure content containers on the webpage, they can be stored inside other tags aswell</p>
+                    <h3>44. Div Tag</h3>
+                    <p>The trusty Div Tag can be used when defining content gets vague for other Tags, as long as you give the ID/Class name an appropriate name, it does not matter.</p>
+                    <h3>45. Aside Tag</h3>
+                    <p>The Aside Tag is another tag that can be used to structure content on your webpage, generally to the side of another content container</p>
+
+                    <h2>Pseudo Classes</h2>
+
+                    <h3>46. :hover</h3>
+                    <p>Hover is activated when you hover your mouse over an item, usually it changes colour and may have a transisitional effect</p>
+                    <h3>47. nth Child</h3>
+                    <p>nth-child means a specifc child of the parent element has been selected for styling</p>
+                    <h3>48. First-Child</h3>
+                    <p>This means only the first child of the parent element is selected</p>
+                    <h3>49. Last-Child</h3>
+                    <p>Similar to first-child, only the last child is selected</p>
+                    <h3>50. :active</h3>
+                    <p>When an element has been activated by the user, this psuedo-class defines what will happen to that element</p>
+
+                    
+                </article>
+            </div>
+            <footer class = "pageFooter">
+                <div class ="instagramLogo">
+                    <a href ="https://www.instagram.com/?hl=en"><i class="fa fa-instagram fa-3x instagram" aria-hidden="true" title="Instagram"></i></a>
+                </div><!-- FIX THESE AND THE SMALL JITTER THAT IS ON ALL PAGES THEN YOU ARE FINISHED-->
+                <div class="githubLogo">
+                    <a href ="https://github.com/"><i class="fa fa-github-alt fa-3x github-alt" aria-hidden="true"  title="GitHub"></i></a>
+                </div>
+                <div class ="homepageLogo">
+                    <a href = "index.html"><i class="fa fa-home fa-3x home" aria-hidden="true" title="Homepage"></i></a>
+                </div>
+                
+        </footer>
+    </body>
+</html>

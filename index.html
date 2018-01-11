@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="CSS/main.css" rel="stylesheet">
+    <!-- this is the code for my favicon, it also works for older browsers because of the png in the root directory -->
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!--I put the imported google fonts in seperate declarations because in HTML validator it gave an error-->
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="pageHeader">
+        <h1>Welcome to the Team!</h1>
+
+    </header>
+
+    <!--Navigation Bar container and unordered list-->
+    <nav class="navBarContainer">
+        <ul class="navBarList">
+            <li class="active"><a href="index.html"> Homepage</a></li>
+            <li><a href="page2.html"> Terms</a></li>
+            <li><a href="page3.html"> Comparisons</a></li>
+            <li><a href="page4.html"> Resources</a></li>
+            <li><a href="page5.html"> MGP</a></li>
+            <li><a href="page6.html"> Evaluation</a></li>
+        </ul>
+    </nav>
+
+    <!--Box container for the contents-->
+    <div class="columnContentContainer">
+        <aside class="leftContentColumn">
+            <h2>Alex Osbourne</h2>
+            <img src="images/Optimized-Ozzy.jpg" title="A picture of the most beautiful person alive" alt="Alex Osbourne @ACO">
+            <div class = "ozzyTextbox">
+                <p>Hi! i am Ozzy, and welcome to my website! I enjoy competitive gaming and drinking Tea! Sports that i enjoy consist of Rugby, Football (playing not watching)
+                    and Badminton. I am a keen runner, running at least 12 miles a week and also enjoy going to the gym.</p>
+            </div>
+        </aside>
+
+        <article class="centralContentColumn">
+            <h2>Mohamed Mohamed</h2>
+            <img src="images/placeholder1.png" title="A picture of Mohamed Mohamed" alt="Mohamed Mohamed @ACO">
+            <div class = "moTextbox">
+                <p>This is Mohamed, he was the main tester of this website and pointed out all the inconsistencies with the website so i could make changes.</p>
+            </div>
+        </article>
+
+        <aside class="rightContentColumn">
+            <h2>Turker Kavechi</h2>
+            <img src="images/Optimized-turker.jpg" title="A picture of Turker Kavechi" alt="Turker Kavechi @ACO">
+            <div class = "turkerTextbox">
+                <p>This is Turker, he was one of the people that i consulted with occasionally on the design, colour schemes and layout of my website. </p>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <div class="videoBoxContainer">
+        <div class="videoBox">
+            <!--I have muted the video because continously loading the webpage for testing was VERY annoying-->
+            <video src="Video/websiteVideo.mp4" width="720" height="480" controls muted>
+                Your browser does not support this video
+            </video>
+        </div>
+
+    </div>
+
+    <!-- I have created 2 different footers, 1 to include the form and google maps that is used only on the homepage and 1 for the rest of the website that includes the fontAwesome logos -->
+    <footer class="indexPageFooter">
+        <div id="map">
+        <script>
+            function initMap() {
+                var mkc = { lat: 52.2722, lng: -0.8832, };
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 4,
+                    center: mkc
+                });
+                var marker = new google.maps.Marker({
+                    position: mkc,
+                    map: map
+                });
+            }
+        </script>
+        <!--This is the only JavaScript that is allowed in the html section according to Liz, it is a google map example taken from https://developers.google.com/maps/documentation/javascript/adding-a-google-map-->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3VnELshlIm7HyS5TSZ43hVydgHc-7OZU&callback=initMap"></script>
+        </div>
+        <div class ="formContainer">
+        <form action="#" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="client_name">
+            </div>
+            <div>
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="client_mail">
+            </div>
+            <div>
+                <label for="msg"></label>
+                <textarea id="msg" name="client_message">Put your message here!</textarea>
+            </div>
+            <div class="button">
+                <button type="submit">Submit!</button>
+            </div>
+        </form>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

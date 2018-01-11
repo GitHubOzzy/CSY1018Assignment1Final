@@ -1,0 +1,459 @@
+/*
+-----------------------**>REMAINING ERRORS<**------------------------------------------
+-->Finish off the form code in the footer, delete the code in there and style it so it looks nice
+--->Get the column rollovers working so that they display text ontop of the image area
+---->background colours gradients throw an error, change them all to rgba from hex
+-----> make the navbar stick to the top of the page and also flex for media queries
+-------> LIST THING TO DO -*-*- FIX THE MEDIA QUERY CONTENT FOR IPAD AND IPAD PRO PAGE 4 AND 6 *-*-*
+
+*/
+/*--------------BODY AND BACKGROUND IMAGE STYLINGS-----------*/
+body{
+    margin: 0px; /*'resets' the browser margin so that all browsers display the content the same*/
+    padding: 0px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    height: 100%; /* this is used for the image below, it makes sure that the image covers the whole viewport */
+    background-image: url("../images/backgroundImageScroller.jpg");
+    /*originally i was looking for a dark colour similar to visual codes grey colour, then decided why not just use a screenshot of VC? */
+    background-position: center center; /* centers the image along both axis*/
+    background-repeat: no-repeat;/* tells the image not to repeat when it goes out of view*/
+    background-attachment: fixed;/* positions the image in a fixed position */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.pageHeader{
+    order: -1;
+    padding: 1em;
+    background: none;
+    text-transform: uppercase;
+    text-align: center;
+    color:#a1dfec;
+    background-color: rgba(97, 108, 116, 0.801);/* originally all my colours were in hex but the transparency threw an error in CSS Validator, so i changed them all to rgba*/
+}
+/*--------------NAVIGATION STYLINGS-----------*/
+.navBarContainer {
+    display: flex;
+    order: 0;
+    font-size:1em;
+    background: rgba(37, 74, 126, 0.8);
+    justify-content: center;
+    
+}
+.navBarList{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    overflow: auto;/*lets the browser decide how the nav items will be displayed at different viewport sizes*/
+    list-style-type: none;
+}
+
+/*--------------LIST ITEMS AND LIST HOVER STYLINGS-----------*/
+li {
+    padding: 0 0.5em; /*this line sets the distance between the values in the list, first=top bottom/second= left right.*/
+    border-right: solid;
+    border-right-color: #8ca1b3;
+    font-family: 'Ubuntu+Condensed', sans-serif;
+
+}
+li a{/*this is the charactersitics of the navbar text items */
+    color:#499be7; /* this is the font colour of all the items in the navbar */
+    text-decoration:  none;/* this is the decoration on text for example, underlining */
+    text-decoration-color: #171a1b;
+    font-size: 1em;
+}
+li:last-child{
+    border-right: none;/* this gives the last child of the list no border*/
+}
+
+li a:hover{ /*this is the hover effect characteristics*/
+    color:#49e2e2;
+    -webkit-transition: all 0.5s ease;/* these make sure that all browsers are able to understand the css microinteractions*/
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+li.active a{ /*this is the current page characteristics*/
+    font-weight: bold;
+    color:#5cb6cc; /*this is the colour of the current page you are on*/
+}
+li.active a:hover{
+    color:#49e2e2;
+    -webkit-transition: all 0.5s ease;/* these make sure that all browsers are able to understand the css microinteractions*/
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+/*--------------PAGE CONTENT CONTAINER STYLINGS-----------*/
+
+.columnContentContainer{
+    order: 1;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(30, 32, 34, 0.8);
+    color: #afdfeb;
+    text-align: center;
+    font-size:1.3em;
+}
+.columnContentContainer a, .checkeredContentContainer a, .contentContainer a{/* changes the link colour and decoration for all these id's*/
+    color: #b895d4;
+    text-decoration:  none;
+}
+.checkeredContentContainer{
+    order: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: rgba(30, 32, 34, 0.8);
+    color: #afdfeb;
+    text-align: center;
+    font-size:1.3em;
+}
+.contentContainer{
+    display: flex;
+    flex-direction: row;
+    font-size:1.3em;   
+}
+.slimColumn{
+    display: flex;
+    flex-flow: column wrap;
+    width:25%;
+}
+/*--------------PAGE CONTENT STYLINGS-----------*/
+/*--------index page stylings-----*/
+.centralContentColumn, .leftContentColumn, .rightContentColumn{
+    width:30%;
+    order: 0;
+    padding:0.5em;
+}
+.ozzyTextbox, .moTextbox, .turkerTextbox{
+    opacity: 0; /* makes all the textboxes disspear until they are are hovered over*/
+ }
+.leftContentColumn:hover img, .rightContentColumn:hover img, .centralContentColumn:hover img  {/*makes just the image dissapear not the name text at the top*/
+    opacity:0; /*i used opacity:0; instead of visibility:hidden; because the transistions did not work properly with visibility.*/
+    -webkit-transition: all 0.5s ease;/* these make sure that all browsers are able to understand the css microinteractions*/
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.leftContentColumn:hover > .ozzyTextbox{ /* the only problem with this method of hovering is i was not sure how to get the transitions to work on the text itself*/
+    display: inline-flex;
+    position: relative;              
+    width:50%;   
+    bottom:600px;/* i can use pixels safely because i know these pictures will never change size and they are still responsive for all platforms*/
+    opacity: 1;                  
+}
+.rightContentColumn:hover > .turkerTextbox{
+    display: inline-flex;
+    position: relative;              
+    width:50%;   
+    bottom:600px;
+    opacity: 1; 
+}
+.centralContentColumn:hover > .moTextbox{ /* i was unsure if i could get all these declartions into 1 line like the content hovers*/
+    display: inline-flex;
+    position: relative;              
+    width:50%;   
+    bottom:600px;
+    opacity: 1; 
+}
+.videoBoxContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    order: 5;
+    background-color: rgba(30, 32, 34, 0.8);
+}
+
+.formContainer{
+    padding: 0.5em;/*just to seperate it from the map a bit when it is flexed into a column in media queries*/
+}
+/*--------page 2 stylings-----*/
+.pageTwoContent{
+    background-color: rgba(156, 170, 180, 0.432);
+    text-align: center;
+    color: #afdfeb;
+}
+/*--------page 3 stylings-----*/
+.page3LeftContentColumn, .page3CentralContentColumn, .page3RightContentColumn{
+    padding:2em;
+    width:30%;
+}
+
+/*--------page 4 stylings-----*/
+.pageFourContent1, .pageFourContent2, .pageFourContent3, .pageFourContent4, .pageFourContent5{
+    padding: 1em;
+}
+
+/*--------page 5 stylings-----*/
+.page5LeftContent{
+    background-color: rgba(30, 32, 34, 0.8);
+    padding: 1em;
+    text-align: center;
+    color: #afdfeb;
+    width:40%;
+    justify-content: center;
+}
+.page5RightContent{
+    background-color: rgba(30, 32, 34, 0.8);
+    color: #afdfeb;
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+}
+.page5image1 img{ /* i needed to call the image inside the div tag to get it to resize automatically*/
+    max-width:100%;
+}
+.page5image2 img{
+    max-width:100%;
+}
+/*--------page 6 stylings-----*/
+.pageSixContent{
+    background-color:rgba(30, 32, 34, 0.8);
+    text-align:center;
+    color:#afdfeb;
+    padding:3em;
+    width:20%;
+}
+.page6ImageContent{
+    order: 5;
+    background-color: rgba(30, 32, 34, 0.8);
+    color: #afdfeb;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+.page6image1 img{ /* i needed to call the image inside the div tag to get it to resize automatically*/
+    max-width:100%;
+}
+.page6image2 img{
+    max-width:100%;
+}
+/*--------------FOOTER STYLINGS-----------*/
+.indexPageFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;/*this is the stylings for the footer on index page, it is different because it has a form and map elements in it*/
+    order: 10;
+    background: rgba(37, 74, 126, 0.651);   
+}
+.pageFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;/*this is the consistent footer stylings*/
+    order: 10;
+    background: rgba(37, 74, 126, 0.651);
+}
+.instagramLogo a, .githubLogo a, .homepageLogo a {
+    color: #afdfeb;
+    text-decoration: none;
+}
+
+#map { /* adding a map from https://developers.google.com/maps/documentation/javascript/adding-a-google-map */
+    order:1;
+    height: 200px;
+    width: 200px;
+   }
+form{ /*  form stylings from https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms */
+    order:-1;
+    text-align: center;
+    width: 5.625em;
+    padding-left:2em;
+}
+textarea {
+    vertical-align: top;
+    height: 5em;
+  }
+  input, textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0);
+  }
+  .button{
+    padding-left: 5.625em;
+  }   
+
+/*-----------------------------------------MEDIA QUERIES OF DOOM-------------------------------------------- */
+/* I am using pixels for my media queries because all the information i could find for screen sizes is in pixels and it is more reliable in general*/
+
+@media (max-width:640px) {/* This media query changes the layout for mobile phones*/
+    body{
+        background-color:#1e2022;
+        background-image: none;
+         
+    }
+    .columnContentContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .videoBox video{
+        width:100%;
+    }
+    
+    .thirdColumnContentContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .slimColumn{
+        display: flex;
+        flex-flow: column;
+        width:100%;
+    }
+    .navBarList{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    li {
+        border-right: none;  
+        font-size: 1em; 
+    }
+    .contentContainer{
+        display: flex;
+       flex-direction: column;
+   }
+   .page5LeftContent{
+    background-color: rgba(30, 32, 34, 0.8);
+    padding: 1em;
+    text-align: center;
+    color: #afdfeb;
+    width:85%; /* i was getting a wierd bug where my page would have blank space on the right side when under 640px(small media queries), 
+                changing the width to 85% fixed it. im sure its because of the padding but i didn't want to risk breaking the site*/
+    justify-content: center;
+    }
+
+    .page5RightContent{
+        background-color: rgba(30, 32, 34, 0.8);
+        color: #afdfeb;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    .centralContentColumn, .leftContentColumn, .rightContentColumn {
+        width:100%;
+        padding:0em;
+    }
+    .centralContentColumn img, .leftContentColumn img, .rightContentColumn img{
+        max-width:100%;
+    }
+    .pageSixContent{
+        background-color:rgba(30, 32, 34, 0.8);
+        text-align:center;
+        color:#afdfeb;
+        padding:0em;
+        width:100%;
+    }
+    .page3LeftContentColumn, .page3CentralContentColumn, .page3RightContentColumn{
+        padding:1em;
+        width:85%;
+    }
+    .indexPageFooter{
+        display: flex;
+        flex-direction: column;
+        order: 10;
+        background: rgba(37, 74, 126, 0.651);
+    }
+    .ozzyTextbox, .moTextbox, .turkerTextbox{
+        opacity: 1; /* makes all the textboxes appear when a mobile phone is detected*/
+     }
+     .leftContentColumn:hover img, .rightContentColumn:hover img, .centralContentColumn:hover img  {/*makes the image appear and no transitions play on mobile devices*/
+        opacity:1; 
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        -ms-transition: none;
+        transition: none;
+    }
+    .leftContentColumn:hover > .ozzyTextbox{/*this is the easiest way i found to remove all the hover effects for mobile devices as hover is unrealiable on those platforms*/
+        display:none;
+    }
+    .rightContentColumn:hover > .turkerTextbox{
+        display: none; 
+    }
+    .centralContentColumn:hover > .moTextbox{ 
+        display: none;
+    }
+}
+    @media (min-width:641px) and (max-width:1024px){/*This media query changes the layout for laptops/notebooks and tablets */
+        body{
+            background-color:#1e2022;
+            background-image: none; /* I removed my scrolling backgorund becasue the text in the image because really distorted in the chrome dev tools and i didn't like it*/
+        }
+        .videoBox video{
+            width:100%;
+        }
+        .columnContentContainer{
+            display: flex;
+            flex-direction:column;
+        }
+        .thirdColumnContentContainer{
+            display: flex;
+            flex-direction: column;
+        }
+        .contentContainer{
+            display: flex;
+           flex-direction: column;
+       }
+       .centralContentColumn, .leftContentColumn, .rightContentColumn {
+        width:100%;
+        padding:0em
+       }
+       .page5LeftContent{
+        background-color: rgba(30, 32, 34, 0.8);
+        padding: 1em;
+        text-align: center;
+        color: #afdfeb;
+        width:90%;/* i was getting a wierd bug where my page would have blank space on the right side when under 1024px, changing the width to 90% fixed it.*/
+        }
+
+        .page5RightContent{
+            background-color: rgba(30, 32, 34, 0.8);
+            color: #afdfeb;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+        .pageSixContent{
+            background-color:rgba(30, 32, 34, 0.8);
+            text-align:center;
+            color:#afdfeb;
+            padding:1em;
+            width:90%;
+        }
+        .page3LeftContentColumn, .page3CentralContentColumn, .page3RightContentColumn{
+            padding:1em;
+            width:90%;
+        }
+        .slimColumn{
+            display: flex;
+            flex-flow: column;
+            width:100%;
+        }
+        .ozzyTextbox, .moTextbox, .turkerTextbox{
+            opacity: 1; /* makes all the textboxes appear when a mobile phone is detected*/
+         }
+         .leftContentColumn:hover img, .rightContentColumn:hover img, .centralContentColumn:hover img  {/*makes the image appear and no transitions play on mobile devices*/
+            opacity:1; 
+            -webkit-transition: none;
+            -moz-transition: none;
+            -o-transition: none;
+            -ms-transition: none;
+            transition: none;
+        }
+        .leftContentColumn:hover > .ozzyTextbox{/*this is the easiest way i found to remove all the hover effects for mobile devices as hover is unrealiable on those platforms*/
+            display:none;
+        }
+        .rightContentColumn:hover > .turkerTextbox{
+            display: none; 
+        }
+        .centralContentColumn:hover > .moTextbox{ 
+            display: none;
+        }
+    }
